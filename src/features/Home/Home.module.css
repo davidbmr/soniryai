@@ -1,0 +1,25 @@
+.section__homeBanner {
+	width: 100%;
+}
+.homeBanner__img {
+	width: 85%;
+}
+
+.section__services {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+
+	padding: 50px 0;
+}
+.section__card__container {
+	display: flex;
+	gap: 50px;
+}
+.section__title {
+	color: var(--color-morado);
+	font-weight: 900;
+	font-size: 30px;
+}
