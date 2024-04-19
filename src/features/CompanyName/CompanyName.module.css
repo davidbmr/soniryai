@@ -1,0 +1,56 @@
+.appStructure__container {
+	display: flex;
+	flex-direction: column;
+	background-color: #5d82ee;
+}
+
+.appStructure__header {
+	width: 100%;
+	height: 60vh;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 0 0 100px 100px;
+	background-color: #7c21ff;
+}
+
+.appStructure__contain {
+	width: 100%;
+	height: 40vh;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.appStructure__text__contain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.appStructure__text {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.appStructure__input {
+	width: 200px;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 25px;
+}
+.appStructure__input::placeholder {
+	color: #f9f9f9;
+}
+

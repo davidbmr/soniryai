@@ -1,0 +1,14 @@
+.appStructure__button {
+	background-color: #7c21ff;
+	padding: 10px 30px;
+	color: #fff;
+	border: none;
+	border-radius: 30px;
+
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	font-size: 20px;
+	cursor: pointer;
+}
