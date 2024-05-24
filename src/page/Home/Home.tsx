@@ -12,8 +12,8 @@ import Signature from "@/features/Signature/Signature";
 export const Home = () => {
 	const [step, setStep] = useState(1);
 
-	const nextStep = (newStep: number) => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+	const nextStep: any = (newStep: number) => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
 		setStep(newStep);
 	};
 

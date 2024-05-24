@@ -58,12 +58,12 @@ const looks: Look[] = [
 ];
 
 type ChooseClothingProps = {
-  nextStep?: () => void;
+  nextStep?: any;
 };
 
 const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
-  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
-  const [selectedLook, setSelectedLook] = useState<Look | null>(null);
+  const [selectedOption, setSelectedOption] = useState<Option | any>(null);
+  const [selectedLook, setSelectedLook] = useState<Look | any>(null);
 
   const handleSelectOption = (option: Option) => {
     if (selectedOption && selectedOption.title === option.title) {
@@ -79,13 +79,13 @@ const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
     setSelectedLook(look);
   };
 
-  const handleBack = () => {
-    if (selectedLook) {
-      setSelectedLook(null);
-    } else {
-      setSelectedOption(null);
-    }
-  };
+  // const handleBack = () => {
+  //   if (selectedLook) {
+  //     setSelectedLook(null);
+  //   } else {
+  //     setSelectedOption(null);
+  //   }
+  // };
 
   return (
     <div className={styles.container}>
