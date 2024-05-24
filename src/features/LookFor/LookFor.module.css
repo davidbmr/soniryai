@@ -1,0 +1,132 @@
+.main__container {
+  background-color: #223147;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__container img {
+  width: 200px;
+}
+
+.container__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 3rem;
+}
+
+.container__text h2 {
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.container__text p {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 700px;
+  margin-top: 0.8rem;
+}
+
+.container__white {
+  margin-top: 2rem;
+  height: 60%;
+  width: 100%;
+  background-color: white;
+  border-radius: 80px 80px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__options__main {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.5s ease;
+}
+
+.container__options__main.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container__options {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__options h4 {
+  margin-bottom: 1rem;
+}
+
+.container__options div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container__options div div {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e7f0ff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.option {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e7f0ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option.active {
+  background-color: #ffcccc;
+}
+
+.container__white h2 {
+  text-align: center;
+  margin-top: 1rem;
+  word-spacing: 5px;
+}
+
+.container__white h2 span {
+  color: #52e8d7;
+}
+
+.submitButton {
+  margin-top: 1rem;
+  padding: 0.6rem 1.1rem;
+  background-color: #7c21ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.4s;
+}
+
+.submitButton:hover {
+  background-color: #a067f1;
+}
+
+.container__button {
+  width: 100%;
+  display: flex;
+  justify-content: end !important;
+  margin-top: 3.5rem;
+}
