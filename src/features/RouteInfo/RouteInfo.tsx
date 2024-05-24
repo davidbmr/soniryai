@@ -9,7 +9,7 @@ export const RouteInfo = ({ nextStep }: Props) => {
 	return (
 		<div className={style.appStructure__container}>
 			<div className={style.appStructure__header}>
-				<img src="/public/assets/logo-fondo-morado.png" alt="" />
+				<img style={{ width: "500px" }} src="/public/assets/logo/soniry-color-blanco.svg" alt="" />
 				<div className={style.appStructure__text__container}>
 					<p className={style.appStructure__text}>
 						Describe tu empresa para tener una{" "}
@@ -17,6 +17,7 @@ export const RouteInfo = ({ nextStep }: Props) => {
 					</p>
 				</div>
 			</div>
+			
 			<div className={style.appStructure__contain}>
 				<div className={style.branding__container}>
 					<p className={style.branding__text}>BRANDING SETTING COMPANY</p>

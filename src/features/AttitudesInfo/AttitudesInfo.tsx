@@ -6,7 +6,7 @@ export const AttitudesInfo = ({ nextStep }: any) => {
 	return (
 		<div className={style.appStructure__container}>
 			<div className={style.section__container}>
-				<img style={{ width: "200px" }} src="/public/assets/logo-simple-morado.png" alt="" />
+				<img style={{ width: "200px" }} src="/public/assets/logo/soniry-color-blanco.svg" alt="" />
 				<p className={style.section__text}>
 					Las actitudes personales juegan un rol importante para la personalidad, vamos a acualizar
 					tu forma de ser
@@ -30,7 +30,7 @@ export const AttitudesInfo = ({ nextStep }: any) => {
 				<br />
 
 				<div style={{ display: "flex", justifyContent: "center" }}>
-					<MainButton onClick={() => nextStep(4)} text="Continuar" />
+					<MainButton onClick={() => nextStep(5)} text="Continuar" />
 				</div>
 			</div>
 		</div>

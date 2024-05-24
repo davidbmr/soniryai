@@ -1,0 +1,13 @@
+.rangeField__container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	gap: 20px;
+}
+
+.box__text {
+	color: #f6f6f6;
+	font-weight: 600;
+	white-space: nowrap;
+}

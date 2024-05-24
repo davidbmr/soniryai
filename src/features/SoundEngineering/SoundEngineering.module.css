@@ -1,0 +1,43 @@
+.appStructure__container {
+	display: flex;
+	justify-content: center;
+	/* background-color: #7e3efe; */
+	background-image: url("/public/assets/img/fondo-oscuro-1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	padding: 20px;
+}
+.section__container {
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	gap: 20px;
+}
+.section__text {
+	color: #f9f9f9;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.rangeFields__container {
+	display: grid;
+
+	gap: 20px;
+}
+
+.box__sounds {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+.box__sound__item {
+	padding: 5px 10px;
+	background-color: #f6f6f6;
+	border-radius: 5px;
+	text-align: center;
+	color: #333;
+	font-weight: 600;
+}

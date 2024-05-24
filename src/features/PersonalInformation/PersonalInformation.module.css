@@ -1,11 +1,11 @@
 .appStructure__container {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
 }
 
 .appStructure__header {
 	width: 100%;
-	height: 30vh;
+	height: 100vh;
 	margin: 0 auto;
 
 	display: flex;
@@ -14,7 +14,6 @@
 	gap: 30px;
 	align-items: center;
 
-	border-radius: 0 0 50px 50px;
 	background-color: #5d82ee;
 }
 

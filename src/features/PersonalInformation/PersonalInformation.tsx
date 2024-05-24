@@ -10,7 +10,7 @@ export const PersonalInformation = ({ nextStep }: Props) => {
 	return (
 		<div className={style.appStructure__container}>
 			<div className={style.appStructure__header}>
-				<img src="/public/assets/logo-fondo-morado.png" alt="" />
+				<img style={{ width: "500px" }} src="/public/assets/logo/soniry-color-blanco.svg" alt="" />
 				<div className={style.appStructure__text__container}>
 					<p className={style.appStructure__text}>
 						Conocer superficialmente es el primer paso para ver en el interior
