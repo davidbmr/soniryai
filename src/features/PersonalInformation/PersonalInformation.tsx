@@ -10,7 +10,7 @@ export const PersonalInformation = ({ nextStep }: Props) => {
 	return (
 		<div className={style.appStructure__container}>
 			<div className={style.appStructure__header}>
-				<img style={{ width: "500px" }} src="/public/assets/logo/soniry-color-blanco.svg" alt="" />
+				<img style={{ width: "500px" }} src="/public/assets/logo/soniry-color-blanco.svg" alt="Logo" />
 				<div className={style.appStructure__text__container}>
 					<p className={style.appStructure__text}>
 						Conocer superficialmente es el primer paso para ver en el interior
@@ -31,7 +31,7 @@ export const PersonalInformation = ({ nextStep }: Props) => {
 						textLabel="Género"
 						direction="row"
 						labelWidth="120px"
-						placeholder="Qué genero es"
+						placeholder="Qué género es"
 					/>
 					<SelectField
 						value={""}
@@ -51,7 +51,7 @@ export const PersonalInformation = ({ nextStep }: Props) => {
 						textLabel="Ubicación"
 						direction="row"
 						labelWidth="120px"
-						placeholder="De donde es"
+						placeholder="De dónde es"
 					/>
 					<SelectField
 						value={""}
@@ -61,7 +61,7 @@ export const PersonalInformation = ({ nextStep }: Props) => {
 						textLabel="Transporte"
 						direction="row"
 						labelWidth="120px"
-						placeholder="Qué suele transportarse"
+						placeholder="Cómo suele transportarse"
 					/>
 					<SelectField
 						value={""}
@@ -71,7 +71,7 @@ export const PersonalInformation = ({ nextStep }: Props) => {
 						textLabel="Casa"
 						direction="row"
 						labelWidth="120px"
-						placeholder="Donde viviría"
+						placeholder="Dónde viviría"
 					/>
 				</div>
 

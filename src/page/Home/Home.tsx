@@ -13,6 +13,7 @@ export const Home = () => {
 	const [step, setStep] = useState(1);
 
 	const nextStep = (newStep: number) => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 		setStep(newStep);
 	};
 
@@ -27,7 +28,6 @@ export const Home = () => {
 			{step === 7 && <ChooseClothing nextStep={nextStep} />}
 			{step === 8 && <LookFor nextStep={nextStep} />}
 			{step === 9 && <Signature nextStep={nextStep} />}
-
 		</>
 	);
 };
