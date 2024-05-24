@@ -7,6 +7,7 @@ import { SoundEngineering } from "@/features/SoundEngineering/SoundEngineering";
 import LookFor from "@/features/LookFor/LookFor";
 import ChooseClothing from "@/features/ChooseClothing/ChooseClothing";
 import WayToBe from "@/features/WayToBe/WayToBe";
+import Signature from "@/features/Signature/Signature";
 
 export const Home = () => {
 	const [step, setStep] = useState(1);
@@ -25,6 +26,7 @@ export const Home = () => {
 			{step === 6 && <WayToBe nextStep={nextStep} />}
 			{step === 7 && <ChooseClothing nextStep={nextStep} />}
 			{step === 8 && <LookFor nextStep={nextStep} />}
+			{step === 9 && <Signature nextStep={nextStep} />}
 
 		</>
 	);
