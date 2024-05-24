@@ -5,9 +5,10 @@ import { PersonalInformation } from "@/features/PersonalInformation/PersonalInfo
 import { AttitudesInfo } from "@/features/AttitudesInfo/AttitudesInfo";
 import { SoundEngineering } from "@/features/SoundEngineering/SoundEngineering";
 import LookFor from "@/features/LookFor/LookFor";
+import ChooseClothing from "@/features/ChooseClothing/ChooseClothing";
 
 export const Home = () => {
-	const [step, setStep] = useState(1);
+	const [step, setStep] = useState(7);
 
 	const nextStep = (newStep: number) => {
 		setStep(newStep);
@@ -21,6 +22,7 @@ export const Home = () => {
 			{step === 4 && <AttitudesInfo nextStep={nextStep} />}
 			{step === 5 && <SoundEngineering nextStep={nextStep} />}
 			{step === 6 && <LookFor nextStep={nextStep} />}
+			{step === 7 && <ChooseClothing nextStep={nextStep} />}
 
 		</>
 	);
