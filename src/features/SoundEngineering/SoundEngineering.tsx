@@ -57,7 +57,7 @@ export const SoundEngineering = ({ nextStep }: any) => {
 				<br />
 				<div style={{ display: "flex", justifyContent: "center" }}>
 					<MainButton
-						onClick={() => nextStep(5)}
+						onClick={() => nextStep(6)}
 						text="Let's try / a sonar"
 						icon={<FaPlay fill={"#fff"} />}
 					/>
