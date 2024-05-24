@@ -1,9 +1,9 @@
 function LookFor( { nextStep }: any ) {
-    return ( 
-        <>
-        <h1>Janeth no hace nada</h1>
-        </>
-     );
+  return ( 
+    <div>
+      <h2>Mentira David jajaj</h2>
+    </div>
+  );
 }
 
 export default LookFor;
