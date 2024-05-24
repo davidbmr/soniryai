@@ -9,7 +9,7 @@ function Signature({ nextStep }: any) {
     <div className={style.container__main}>
       <div className={style.container__purple}>
         <img src={logo} alt="logo" />
-        <img src={img} alt="firma soniry" />
+        <img src={img} alt="firma soniry" width={480} height={380}/>
         <p className={style.signature__label}>FIRMA SONIRY</p>
       </div>
 
