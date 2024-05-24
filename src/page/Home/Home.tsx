@@ -9,7 +9,7 @@ import ChooseClothing from "@/features/ChooseClothing/ChooseClothing";
 import WayToBe from "@/features/WayToBe/WayToBe";
 
 export const Home = () => {
-	const [step, setStep] = useState(8);
+	const [step, setStep] = useState(1);
 
 	const nextStep = (newStep: number) => {
 		setStep(newStep);
@@ -22,9 +22,9 @@ export const Home = () => {
 			{step === 3 && <PersonalInformation nextStep={nextStep} />}
 			{step === 4 && <AttitudesInfo nextStep={nextStep} />}
 			{step === 5 && <SoundEngineering nextStep={nextStep} />}
-			{step === 6 && <LookFor nextStep={nextStep} />}
+			{step === 6 && <WayToBe nextStep={nextStep} />}
 			{step === 7 && <ChooseClothing nextStep={nextStep} />}
-			{step === 8 && <WayToBe nextStep={nextStep} />}
+			{step === 8 && <LookFor nextStep={nextStep} />}
 
 		</>
 	);

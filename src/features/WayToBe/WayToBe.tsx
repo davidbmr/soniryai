@@ -68,7 +68,7 @@ const WayToBe: React.FC = ({ nextStep }: any) => {
             </div>
 
             <div className={style.container__button}>
-                <button onClick={() => nextStep(9)}> Continuar </button>
+                <button onClick={() => nextStep(7)}> Continuar </button>
             </div>
         </div>
     );

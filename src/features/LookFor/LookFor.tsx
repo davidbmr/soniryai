@@ -99,11 +99,11 @@ function LookFor({ nextStep }) {
                 </div>
               ))}
             </div>
-            <div className={style.container__button}>
-              <button className={style.submitButton} onClick={() => nextStep(7)}>Continuar</button>
-            </div>
           </div>
         </div>
+            <div className={style.container__button}>
+              <button className={style.submitButton} onClick={() => nextStep(8)}>Continuar</button>
+            </div>
       </div>
     </div>
   );
