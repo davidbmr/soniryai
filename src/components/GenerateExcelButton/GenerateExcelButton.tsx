@@ -86,7 +86,7 @@ const GenerateExcelButton = ({ data }) => {
       hour: "2-digit",
       minute: "2-digit",
     });
-    return `Gestion_recargas_${formattedDate}`;
+    return `datos_soniryai_${formattedDate}`;
   };
 
   const handleExportClick = () => {

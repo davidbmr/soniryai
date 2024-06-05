@@ -15,9 +15,9 @@ interface Props {
 }
 
 const genderOptions = [
-    { label: "Masculino", value: "male" },
-    { label: "Femenino", value: "female" },
-    { label: "Otro", value: "other" },
+    { label: "Masculino", value: "Masculino" },
+    { label: "Femenino", value: "Femenino" },
+    { label: "Otro", value: "Otro" },
 ];
 
 const ageOptions = [
@@ -31,22 +31,22 @@ const ageOptions = [
 ];
 
 const locationOptions = [
-    { label: "Ciudad", value: "city" },
-    { label: "Suburbio", value: "suburb" },
-    { label: "Rural", value: "rural" },
+    { label: "Ciudad", value: "Ciudad" },
+    { label: "Suburbio", value: "Suburbio" },
+    { label: "Rural", value: "Rural" },
 ];
 
 const transportOptions = [
-    { label: "Coche", value: "car" },
-    { label: "Bicicleta", value: "bicycle" },
-    { label: "Transporte público", value: "public_transport" },
-    { label: "A pie", value: "walk" },
+    { label: "Coche", value: "Coche" },
+    { label: "Bicicleta", value: "Bicicleta" },
+    { label: "Transporte público", value: "Transporte_Publico" },
+    { label: "A pie", value: "Caminar" },
 ];
 
 const homeOptions = [
-    { label: "Apartamento", value: "apartment" },
-    { label: "Casa", value: "house" },
-    { label: "Otro", value: "other" },
+    { label: "Apartamento", value: "Apartamento" },
+    { label: "Casa", value: "Casa" },
+    { label: "Otro", value: "Otro" },
 ];
 
 export const PersonalInformation = ({ nextStep, formData }: Props) => {

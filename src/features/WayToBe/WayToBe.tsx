@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Slider } from "primereact/slider";
 import style from "./WayToBe.module.css";
 import BasicKnop from "@/components/MainKnop/MainKnop";
 import logo from "../../../public/assets/logo/soniry-color-morado.svg";
+import { Slider } from "primereact/slider";
 
 interface Props {
     nextStep: (newStep: number, data: any) => void;
@@ -27,7 +27,7 @@ const WayToBe = ({ nextStep, formData }: Props) => {
         h2Element?.classList.add(style.animateFromLeft);
     }, []);
 
-    const handleSliderChange = (name: string, value: number) => {
+    const handleKnobChange = (name: string, value: number) => {
         setValues((prevValues) => ({
             ...prevValues,
             [name]: value,
@@ -37,7 +37,6 @@ const WayToBe = ({ nextStep, formData }: Props) => {
     const handleNext = () => {
         nextStep(7, values);
     };
-
 
     return (
         <div className={style.mainContainer}>
@@ -49,11 +48,10 @@ const WayToBe = ({ nextStep, formData }: Props) => {
                 <h2>¡TU FORMA DE SER!</h2>
                 <p>
                     <span className={style.highlight1}>
-                        {" "}
                         En tu forma de ser, dinos a qué color suenas, cómo reaccionas o{" "}
-                    </span>{" "}
+                    </span>
                     <span className={style.highlight2}>reaccionarías</span>
-                    <span className={style.highlight1}> y también tu </span>{" "}
+                    <span className={style.highlight1}> y también tu </span>
                     <span className={style.highlight3}>
                         tipo de letra si es toda uniforme o es un garabato.
                     </span>
@@ -81,32 +79,16 @@ const WayToBe = ({ nextStep, formData }: Props) => {
             </div>
 
             <div className={style.knobsSection}>
-                <BasicKnop label="Temperamento (Innato)" />
-                <Slider
-                    value={values?.temperament}
-                    onChange={(e) => handleSliderChange('temperament', e.value as number)}
-                    className={style.slider}
-                />
-                <BasicKnop label="Carácter (Adquirido)" />
-                <Slider
-                    value={values?.character}
-                    
-                    onChange={(e) => handleSliderChange('character', e.value as number)}
-                    className={style.slider}
-                />
-                <BasicKnop label="Conversador" />
-                <Slider
-                    value={values?.conversador}
-                    onChange={(e) => handleSliderChange('conversador', e.value as number)}
-                    className={style.slider}
-                />
+                <BasicKnop label="Temperamento (Innato)" value={values.temperament} onChange={(val) => handleKnobChange('temperament', val)} />
+                <BasicKnop label="Carácter (Adquirido)" value={values.character} onChange={(val) => handleKnobChange('character', val)} />
+                <BasicKnop label="Conversador" value={values.conversador} onChange={(val) => handleKnobChange('conversador', val)} />
             </div>
 
             <div className={style.sliderSection}>
                 <button className={style.generateTextButton}>GENERATE TEXT:</button>
                 <Slider
-                    value={values?.contrast}
-                    onChange={(e) => handleSliderChange('contrast', e.value as number)}
+                    value={values.contrast}
+                    onChange={(e) => handleKnobChange('contrast', e.value as number)}
                     className={style.slider}
                 />
                 <div className={style.sliderLabels}>
