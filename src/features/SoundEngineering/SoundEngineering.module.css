@@ -41,3 +41,15 @@
 	color: #333;
 	font-weight: 600;
 }
+
+/* SoundEngineering.module.css */
+
+.box__sound__item {
+    /* Estilos existentes */
+    cursor: pointer;
+}
+
+.box__sound__item.active {
+    background-color: #7e3efe; /* Color de fondo para el estado activo */
+    color: #fff; /* Color de texto para el estado activo */
+}
