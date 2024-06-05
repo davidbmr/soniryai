@@ -5,16 +5,17 @@ import BasicKnop from "@/components/MainKnop/MainKnop";
 import logo from "../../../public/assets/logo/soniry-color-morado.svg";
 
 interface Props {
-    nextStep: any;
+    nextStep: (newStep: number, data: any) => void;
+    formData: {
+        contrast: number;
+        temperament: number;
+        character: number;
+        conversador: number;
+    };
 }
 
-const WayToBe = ({ nextStep }: Props) => {
-    const [values, setValues] = useState({
-        contrast: 50,
-        temperament: 50,
-        character: 50,
-        conversador: 50,
-    });
+const WayToBe = ({ nextStep, formData }: Props) => {
+    const [values, setValues] = useState(formData);
 
     useEffect(() => {
         const logoElement = document.querySelector(`.${style.logo}`);
@@ -32,6 +33,11 @@ const WayToBe = ({ nextStep }: Props) => {
             [name]: value,
         }));
     };
+
+    const handleNext = () => {
+        nextStep(7, values);
+    };
+
 
     return (
         <div className={style.mainContainer}>
@@ -77,19 +83,20 @@ const WayToBe = ({ nextStep }: Props) => {
             <div className={style.knobsSection}>
                 <BasicKnop label="Temperamento (Innato)" />
                 <Slider
-                    value={values.temperament}
+                    value={values?.temperament}
                     onChange={(e) => handleSliderChange('temperament', e.value as number)}
                     className={style.slider}
                 />
                 <BasicKnop label="Carácter (Adquirido)" />
                 <Slider
-                    value={values.character}
+                    value={values?.character}
+                    
                     onChange={(e) => handleSliderChange('character', e.value as number)}
                     className={style.slider}
                 />
                 <BasicKnop label="Conversador" />
                 <Slider
-                    value={values.conversador}
+                    value={values?.conversador}
                     onChange={(e) => handleSliderChange('conversador', e.value as number)}
                     className={style.slider}
                 />
@@ -98,7 +105,7 @@ const WayToBe = ({ nextStep }: Props) => {
             <div className={style.sliderSection}>
                 <button className={style.generateTextButton}>GENERATE TEXT:</button>
                 <Slider
-                    value={values.contrast}
+                    value={values?.contrast}
                     onChange={(e) => handleSliderChange('contrast', e.value as number)}
                     className={style.slider}
                 />
@@ -109,7 +116,7 @@ const WayToBe = ({ nextStep }: Props) => {
             </div>
 
             <div className={style.container__button}>
-                <button onClick={() => nextStep(7)}> Continuar </button>
+                <button onClick={handleNext}> Continuar </button>
             </div>
         </div>
     );

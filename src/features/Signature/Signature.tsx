@@ -2,8 +2,11 @@ import { FaArrowUp } from "react-icons/fa";
 import style from "./Signature.module.css";
 import logo from "../../../public/assets/img/logo-sin-fondo.png";
 import img from "../../../public/assets/img/signature.png";
+import GenerateExcelButton from "@/components/GenerateExcelButton/GenerateExcelButton";
 
-function Signature({ nextStep }: any) {
+function Signature({ nextStep, formData }: any) {
+
+	console.log(formData, "formData")
 	return (
 		<div className={style.container__main}>
 			<div className={style.container__purple}>
@@ -20,6 +23,7 @@ function Signature({ nextStep }: any) {
 			<div className={style.floating__button} onClick={() => nextStep(1)}>
 				<FaArrowUp size={20} color="white" />
 			</div>
+			<GenerateExcelButton data={[formData]} />
 		</div>
 	);
 }

@@ -58,19 +58,20 @@ const looks: Look[] = [
 ];
 
 type ChooseClothingProps = {
-  nextStep?: any;
+  nextStep: (newStep: number, data: any) => void;
+  formData: {
+    option: Option | null;
+    look: Look | null;
+  };
 };
 
-const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
-  const [selection, setSelection] = useState<{ option: Option | null; look: Look | null }>({
-    option: null,
-    look: null,
-  });
+const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep, formData }) => {
+  const [selection, setSelection] = useState(formData);
 
   const handleSelectOption = (option: Option) => {
     setSelection((prevSelection) => ({
       ...prevSelection,
-      option: prevSelection.option?.title === option.title ? null : option,
+      option: prevSelection?.option?.title === option?.title ? null : option,
       look: null,
     }));
   };
@@ -82,36 +83,40 @@ const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
     }));
   };
 
+  const handleNext = () => {
+    nextStep(8, selection);
+  };
+
   return (
     <div className={styles.container}>
-      <div className={styles.contentContainer} style={{ height: selection.option ? "60%" : "60%" }}>
-        {!selection.option ? (
+      <div className={styles.contentContainer} style={{ height: selection?.option ? "60%" : "60%" }}>
+        {!selection?.option ? (
           <>
             <h1 className={styles.title}>¿Qué polo usas?</h1>
             <p className={styles.description}>Una prenda dice más que mil palabras</p>
 
-            {options.map((option, index) => (
+            {options?.map((option, index) => (
               <div
                 key={index}
                 className={styles.option}
                 style={{
-                  backgroundColor: option.backgroundColor,
+                  backgroundColor: option?.backgroundColor,
                 }}
                 onClick={() => handleSelectOption(option)}
               >
-                <img src={option.image} alt={option.title} />
+                <img src={option?.image} alt={option?.title} />
                 <div className={styles.optionText}>
                   <div
                     className={styles.optionTitle}
                     style={{
-                      color: selection.option?.title === option.title ? "#fff" : option.textColor,
-                      backgroundColor: selection.option?.title === option.title ? "#8115FB" : "transparent",
+                      color: selection?.option?.title === option?.title ? "#fff" : option?.textColor,
+                      backgroundColor: selection?.option?.title === option?.title ? "#8115FB" : "transparent",
                     }}
                   >
-                    {option.title}
+                    {option?.title}
                   </div>
-                  <div className={styles.optionDescription} style={{ color: option.textColor }}>
-                    {option.description}
+                  <div className={styles.optionDescription} style={{ color: option?.textColor }}>
+                    {option?.description}
                   </div>
                 </div>
               </div>
@@ -153,7 +158,7 @@ const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
           </>
         )}
         <div className={styles.container__button}>
-          <button onClick={() => nextStep(8)}> Continuar </button>
+          <button onClick={handleNext}> Continuar </button>
         </div>
       </div>
     </div>

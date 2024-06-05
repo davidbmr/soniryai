@@ -29,10 +29,28 @@ export const Home = () => {
             moderno: 50,
             nocturno: 50,
         },
-        soundEngineering: {},
-        wayToBe: {},
-        chooseClothing: {},
-        lookFor: {},
+        soundEngineering: {
+            ritmo: 50,
+            tono: 50,
+            fuerza: 50,
+            estilo: 50,
+            selectedGenres: [],
+        },
+        wayToBe: {
+            contrast: 50,
+            temperament: 50,
+            character: 50,
+            conversador: 50,
+        },
+        chooseClothing: {
+            option: null,
+            look: null,
+        },
+        lookFor: {
+            selectedRitmo: null,
+            selectedGeneros: [],
+            selectedFinal: null,
+        },
         signature: {},
     });
 
@@ -43,7 +61,7 @@ export const Home = () => {
         }));
     };
 
-    const nextStep = (newStep: any, key?: string, data?: any) => {
+    const nextStep = (newStep: number, key?: string, data?: any) => {
         if (key && data) {
             updateFormData(key, data);
         }
@@ -52,17 +70,18 @@ export const Home = () => {
     };
 
 	console.log(formData)
+
     return (
         <>
             {step === 1 && <CompanyName nextStep={(newStep: number, data: any) => nextStep(newStep, "companyName", data)} />}
             {step === 2 && <RouteInfo nextStep={(newStep: number, data: any) => nextStep(newStep, "routeInfo", data)} />}
             {step === 3 && <PersonalInformation nextStep={(newStep: number, data: any) => nextStep(newStep, "personalInformation", data)} formData={formData.personalInformation} />}
             {step === 4 && <AttitudesInfo nextStep={(newStep: number, data: any) => nextStep(newStep, "attitudes", data)} formData={formData.attitudes} />}
-            {step === 5 && <SoundEngineering nextStep={(newStep: number, data: any) => nextStep(newStep, "soundEngineering", data)} />}
-            {step === 6 && <WayToBe nextStep={(newStep: number, data: any) => nextStep(newStep, "wayToBe", data)} />}
-            {step === 7 && <ChooseClothing nextStep={(newStep: number, data: any) => nextStep(newStep, "chooseClothing", data)} />}
-            {step === 8 && <LookFor nextStep={(newStep: number, data: any) => nextStep(newStep, "lookFor", data)} />}
-            {step === 9 && <Signature nextStep={(newStep: number, data: any) => nextStep(newStep, "signature", data)} />}
+            {step === 5 && <SoundEngineering nextStep={(newStep: number, data: any) => nextStep(newStep, "soundEngineering", data)} formData={formData.soundEngineering} />}
+            {step === 6 && <WayToBe nextStep={(newStep: number, data: any) => nextStep(newStep, "wayToBe", data)} formData={formData.wayToBe} />}
+            {step === 7 && <ChooseClothing nextStep={(newStep: number, data: any) => nextStep(newStep, "chooseClothing", data)} formData={formData.chooseClothing} />}
+            {step === 8 && <LookFor nextStep={(newStep: number, data: any) => nextStep(newStep, "lookFor", data)} formData={formData.lookFor} />}
+            {step === 9 && <Signature nextStep={(newStep: number, data: any) => nextStep(newStep, "signature", data)}  formData={formData}/>}
         </>
     );
 };
