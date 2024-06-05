@@ -62,35 +62,30 @@ type ChooseClothingProps = {
 };
 
 const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
-  const [selectedOption, setSelectedOption] = useState<Option | any>(null);
-  const [selectedLook, setSelectedLook] = useState<Look | any>(null);
+  const [selection, setSelection] = useState<{ option: Option | null; look: Look | null }>({
+    option: null,
+    look: null,
+  });
 
   const handleSelectOption = (option: Option) => {
-    if (selectedOption && selectedOption.title === option.title) {
-      setSelectedOption(null);
-      setSelectedLook(null);
-    } else {
-      setSelectedOption(option);
-      setSelectedLook(null);
-    }
+    setSelection((prevSelection) => ({
+      ...prevSelection,
+      option: prevSelection.option?.title === option.title ? null : option,
+      look: null,
+    }));
   };
 
   const handleSelectLook = (look: Look) => {
-    setSelectedLook(look);
+    setSelection((prevSelection) => ({
+      ...prevSelection,
+      look,
+    }));
   };
-
-  // const handleBack = () => {
-  //   if (selectedLook) {
-  //     setSelectedLook(null);
-  //   } else {
-  //     setSelectedOption(null);
-  //   }
-  // };
 
   return (
     <div className={styles.container}>
-      <div className={styles.contentContainer} style={{ height: selectedOption ? "60%" : "60%" }}>
-        {!selectedOption ? (
+      <div className={styles.contentContainer} style={{ height: selection.option ? "60%" : "60%" }}>
+        {!selection.option ? (
           <>
             <h1 className={styles.title}>¿Qué polo usas?</h1>
             <p className={styles.description}>Una prenda dice más que mil palabras</p>
@@ -109,8 +104,8 @@ const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
                   <div
                     className={styles.optionTitle}
                     style={{
-                      color: selectedOption?.title === option.title ? "#fff" : option.textColor,
-                      backgroundColor: selectedOption?.title === option.title ? "#8115FB" : "transparent",
+                      color: selection.option?.title === option.title ? "#fff" : option.textColor,
+                      backgroundColor: selection.option?.title === option.title ? "#8115FB" : "transparent",
                     }}
                   >
                     {option.title}
@@ -124,14 +119,14 @@ const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
           </>
         ) : (
           <>
-            <div className={styles.option} style={{ backgroundColor: "#8115FB" }} onClick={() => handleSelectOption(selectedOption)}>
-              <img src={selectedOption.image} alt={selectedOption.title} />
+            <div className={styles.option} style={{ backgroundColor: "#8115FB" }} onClick={() => handleSelectOption(selection.option!)}>
+              <img src={selection.option.image} alt={selection.option.title} />
               <div className={styles.optionText}>
                 <div className={styles.optionTitle} style={{ color: "#fff" }}>
-                  {selectedOption.title}
+                  {selection.option.title}
                 </div>
                 <div className={styles.optionDescription} style={{ color: "#fff" }}>
-                  {selectedOption.description}
+                  {selection.option.description}
                 </div>
               </div>
             </div>
@@ -145,8 +140,8 @@ const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
                     <div
                       className={styles.lookTitle}
                       style={{
-                        color: selectedLook?.title === look.title ? "#fff" : "#000",
-                        backgroundColor: selectedLook?.title === look.title ? "#8115FB" : "transparent",
+                        color: selection.look?.title === look.title ? "#fff" : "#000",
+                        backgroundColor: selection.look?.title === look.title ? "#8115FB" : "transparent",
                       }}
                     >
                       {look.title}
@@ -157,9 +152,9 @@ const ChooseClothing: React.FC<ChooseClothingProps> = ({ nextStep }) => {
             </div>
           </>
         )}
-         <div className={styles.container__button}>
-                <button onClick={() => nextStep(8)}> Continuar </button>
-            </div>
+        <div className={styles.container__button}>
+          <button onClick={() => nextStep(8)}> Continuar </button>
+        </div>
       </div>
     </div>
   );
