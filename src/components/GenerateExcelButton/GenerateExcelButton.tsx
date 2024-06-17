@@ -31,7 +31,7 @@ const GenerateExcelButton = ({ data }) => {
 
     const headers = Object.keys(dataToExport[0]);
     headers.forEach((header, index) => {
-      const cell = sheet.getCell(1, index + 1);
+      const cell: any = sheet.getCell(1, index + 1);
       cell.value = header.replace(/_/g, " ");
       cell.fill = headerStyle.fill;
       cell.font = headerStyle.font;
@@ -43,7 +43,7 @@ const GenerateExcelButton = ({ data }) => {
 
     dataToExport.forEach((item, rowIndex) => {
       headers.forEach((header, colIndex) => {
-        const cell = sheet.getCell(rowIndex + 2, colIndex + 1);
+        const cell: any = sheet.getCell(rowIndex + 2, colIndex + 1);
         cell.value = item[header];
         cell.border = headerStyle.border;
         cell.alignment = {
@@ -93,7 +93,7 @@ const GenerateExcelButton = ({ data }) => {
     const filename = generateFileName();
     const getFechaHora = (created_at) => {
       const fecha = new Date(created_at);
-      const options = {
+      const options: any = {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",

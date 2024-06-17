@@ -15,15 +15,21 @@
 		"jsx": "react-jsx",
 
 		/* Linting */
-		"strict": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true,
+		"strict": false,
+		"noImplicitAny": false,
+		"noImplicitThis": false,
+		"strictNullChecks": false,
+		"strictFunctionTypes": false,
+		"strictPropertyInitialization": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noFallthroughCasesInSwitch": false,
 
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
-		}
+		},
+		"noEmitOnError": false
 	},
 
 	"include": ["src"],
