@@ -67,7 +67,7 @@ export const PersonalInformation = ({ nextStep, formData }: Props) => {
     return (
         <div className={style.appStructure__container}>
             <div className={style.appStructure__header}>
-                <img style={{ width: "500px" }} src="/public/assets/logo/soniry-color-blanco.svg" alt="Logo" />
+                <img style={{ width: "500px" }} src="/assets/logo/soniry-color-blanco.svg" alt="Logo" />
                 <div className={style.appStructure__text__container}>
                     <p className={style.appStructure__text}>
                         Conocer superficialmente es el primer paso para ver en el interior

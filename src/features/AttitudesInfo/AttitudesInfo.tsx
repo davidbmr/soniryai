@@ -27,7 +27,7 @@ export const AttitudesInfo = ({ nextStep, formData }: Props) => {
     return (
         <div className={style.appStructure__container}>
             <div className={style.section__container}>
-                <img style={{ width: "200px" }} src="/public/assets/logo/soniry-color-blanco.svg" alt="" />
+                <img style={{ width: "200px" }} src="/assets/logo/soniry-color-blanco.svg" alt="" />
                 <p className={style.section__text}>
                     Las actitudes personales juegan un rol importante para la personalidad, vamos a actualizar
                     tu forma de ser

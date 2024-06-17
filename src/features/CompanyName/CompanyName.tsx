@@ -1,19 +1,16 @@
 import { MainButton } from "@/components/MainButton/MainButton";
 import style from "./CompanyName.module.css";
+import logo from "../../../public/assets/logo/soniry-color-blanco.svg";
 
 interface Props {
-	nextStep: (newStep: number) => void;
+	nextStep: any;
 }
 
 export const CompanyName = ({ nextStep }: Props) => {
 	return (
 		<div className={style.appStructure__container}>
 			<div className={style.appStructure__header}>
-				<img
-					className={style.appStructure__logo}
-					src="/public/assets/logo/soniry-color-blanco.svg"
-					alt=""
-				/>
+				<img className={style.appStructure__logo} src={logo} alt="" />
 			</div>
 			<div className={style.appStructure__contain}>
 				<div className={style.appStructure__text__contain}>
