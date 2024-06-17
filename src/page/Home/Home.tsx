@@ -69,11 +69,9 @@ export const Home = () => {
         setStep(newStep);
     };
 
-	console.log(formData)
-
     return (
         <>
-            {step === 1 && <CompanyName nextStep={(newStep: number, data: any) => nextStep(newStep, "companyName", data)} />}
+            {step === 1 && <CompanyName nextStep={(newStep: number, data: any) => nextStep(newStep, "companyName", data)} formData={formData.companyName} />}
             {step === 2 && <RouteInfo nextStep={(newStep: number, data: any) => nextStep(newStep, "routeInfo", data)} />}
             {step === 3 && <PersonalInformation nextStep={(newStep: number, data: any) => nextStep(newStep, "personalInformation", data)} formData={formData.personalInformation} />}
             {step === 4 && <AttitudesInfo nextStep={(newStep: number, data: any) => nextStep(newStep, "attitudes", data)} formData={formData.attitudes} />}

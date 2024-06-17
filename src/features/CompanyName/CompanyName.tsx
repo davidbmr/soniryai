@@ -1,12 +1,25 @@
 import { MainButton } from "@/components/MainButton/MainButton";
 import style from "./CompanyName.module.css";
 import logo from "../../../public/assets/logo/soniry-color-blanco.svg";
+import { useState } from "react";
 
 interface Props {
 	nextStep: any;
+	formData?: any;
 }
 
-export const CompanyName = ({ nextStep }: Props) => {
+export const CompanyName = ({ nextStep, formData }: Props) => {
+	const [formValues, setFormValues] = useState("");
+
+	const handleChange = (e: any) => {
+		const { value } = e.target;
+		setFormValues(value);
+	};
+
+	const handleNext = () => {
+		nextStep(2, formValues);
+	};
+
 	return (
 		<div className={style.appStructure__container}>
 			<div className={style.appStructure__header}>
@@ -18,12 +31,13 @@ export const CompanyName = ({ nextStep }: Props) => {
 					<input
 						className={style.appStructure__input}
 						type="text"
-						name=""
 						placeholder={`"Company Name"`}
+						value={formData.companyName}
+						onChange={handleChange}
 					/>
 				</div>
 
-				<MainButton onClick={() => nextStep(2)} icon={true} text="Start" />
+				<MainButton onClick={handleNext} icon={true} text="Start" />
 			</div>
 		</div>
 	);
