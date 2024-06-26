@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.container {
+  position: relative;
+  background-image: url("../../../public/fondo_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.container__logo {
+  margin-right: 15rem;
+  width: 350px;
+  text-align: center;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  width: 40%;
+  margin-bottom: 1rem;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  width: 80%;
+}
+
+.iconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+  background-color: #0c22d6;
+  border-radius: 40px;
+  padding: 25px 5rem;
+}
+
+.icon {
+  font-size: 50px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.diagnosis {
+  border: #0c22d6 1px solid;
+  padding: 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.phases {
+  margin: 20px 0;
+  width: 80%;
+}
+
+.phase {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.phaseItem {
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.phaseItem h3 {
+  margin-bottom: 1rem;
+  background-color: #0c22d6;
+  padding: 1rem;
+  color: #ffffff;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.phaseItem p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
