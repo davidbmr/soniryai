@@ -228,3 +228,33 @@
 .animateFromRight {
     animation: slideInFromRight 1s forwards;
 }
+
+.colorRow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.colorBox {
+    width: 110px;
+    height: 110px;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Ajusta el tamaño del selector de color */
+.colorSection .sketch-picker {
+    width: auto !important;
+}
+
+.colorLabel {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+}
+
+
