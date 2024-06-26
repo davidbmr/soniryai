@@ -12,7 +12,9 @@
 	justify-content: center;
 	gap: 30px;
 	align-items: center;
-	background-color: #5d82ee;
+	background-image: url("../../../public/gradient_1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	animation: slideInFromLeft 1s ease-out;
 }
 

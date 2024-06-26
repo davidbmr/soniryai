@@ -7,8 +7,11 @@ import logo from '../../../public/assets/logo/soniry-color-blanco.svg';
 import persona_1 from '../../../public/persona_1.png';
 import persona_2 from '../../../public/persona_2.png';
 import persona_3 from '../../../public/persona_3.png';
+import { useNavigate } from 'react-router-dom';
 
 function HomeLanding() {
+  const navigate = useNavigate()
+
   const settings = {
     dots: true,
     infinite: true,
@@ -56,7 +59,7 @@ function HomeLanding() {
 
           <div className={style.text__empresa}>
             <h4> ¿A QUÉ SUENA TU <br /> EMPRESA?</h4>
-            <div className={style.button}> DESCÚBRELO </div>
+            <div className={style.button} onClick={()=> navigate("/form")}> DESCÚBRELO </div>
           </div>
         </div>
       </div>

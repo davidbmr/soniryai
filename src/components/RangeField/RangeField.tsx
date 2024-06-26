@@ -14,11 +14,13 @@ export const RangeField = ({ firstText, secondText, initialValue, onValueChange,
     const [value, setValue] = useState<number>(initialValue);
 
     useEffect(() => {
-        onValueChange(value);
-    }, [value, onValueChange]);
+        setValue(initialValue);
+    }, [initialValue]);
 
     const handleChange = (e: SliderChangeEvent) => {
-        setValue(e.value as number);
+        const newValue = e.value as number;
+        setValue(newValue);
+        onValueChange(newValue);
     };
 
     return (

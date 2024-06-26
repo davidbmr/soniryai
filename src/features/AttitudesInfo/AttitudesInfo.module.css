@@ -1,7 +1,9 @@
 .appStructure__container {
 	display: flex;
 	justify-content: center;
-	background-color: #7e3efe;
+	background-image: url("../../../public/gradient_1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 	min-height: 100vh;
 	padding: 20px;
 }
@@ -15,6 +17,10 @@
 	color: #f9f9f9;
 	font-size: 18px;
 	font-weight: 600;
+}
+
+.box__text {
+	width: 200px;
 }
 
 .box__container {

@@ -1,4 +1,5 @@
 import DiscoverSound from "@/features/DiscoverSound/DiscoverSound";
+import Footer from "@/features/Footer/Footer";
 import HomeLanding from "@/features/HomeLanding/HomeLanding";
 import InfoLanding from "@/features/InfoLanding/InfoLanding";
 
@@ -8,6 +9,8 @@ function Landing() {
       <HomeLanding />
       <InfoLanding/>
       <DiscoverSound/>
+      <Footer/>
+
     </div>
   );
 }
