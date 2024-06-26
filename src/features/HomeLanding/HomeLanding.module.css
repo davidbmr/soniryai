@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Roboto", sans-serif;
+
 }
 
 .overlay {
@@ -42,7 +44,7 @@
 }
 
 .slider {
-  width: 550px; /* Ajusta el tamaño del slider */
+  width: 580px; /* Ajusta el tamaño del slider */
   margin: 0 auto;
 }
 
@@ -72,7 +74,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 0 4rem;
+  margin-left: 20rem;
   margin-top: 20px;
   font-family: "Roboto", sans-serif;
 }
@@ -90,11 +94,12 @@
 
 .text_section p {
   font-size: 1.5rem;
-
+  font-weight: 500;
 }
 
 .text_section h2 span {
-  color: #1e90ff; /* Puedes cambiar esto al color que desees */
+  color: #0c22d6;
+  font-weight: 400;
 }
 
 .button {

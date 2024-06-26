@@ -1,0 +1,70 @@
+.container__main {
+    background-color: #253032; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    padding: 20px 40px; /* Ajusta el padding según sea necesario */
+    font-family: Arial, sans-serif;
+    height: auto;
+  }
+  
+  .top__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    max-height: 150px; /* Ajusta el tamaño del logo según sea necesario */
+  }
+  
+  .nav__links {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2;
+    font-size: 14px;
+    margin-left: 35px;
+  }
+  
+  .nav__links p {
+    margin: 0 15px;
+  }
+  
+  
+  .contact__section h5 {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    width: 400px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    background-color: #0c22d6; /* Color del botón */
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .separator {
+    border: 0.5px solid #707070;
+    margin: 40px 0 30px 0;
+  }
+  
+  .bottom__section {
+    display: flex;
+    gap: 30px;
+    font-size: 12px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+  }
+  
+  .bottom__section p {
+    margin: 0 15px;
+    color: #949498;
+  }
+  
